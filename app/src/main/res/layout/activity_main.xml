@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.csis.lab02.MainActivity">
+
+    <!-- TextView displays a line of text-->
+    <!-- wrap_content makes size of widget to size of data inside it i.e. text !-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Performance 2 Patch"
+        android:id="@+id/sampleText"/> <!-- Every resource must be given an id !-->
+
+    <!-- layout controls are always layout_XXXXX="" Play around with this !-->
+
+    <!-- Edit Text is a text field that will bring the keyboard up when tapped !-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On / Off"
+        android:id="@+id/onOffText"
+        android:layout_below="@+id/sampleText"
+        android:layout_toEndOf="@+id/sampleText"
+        android:layout_marginTop="39dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slider1"
+        android:max="400"
+        android:layout_below="@+id/sendButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="24dp"
+        android:layout_toStartOf="@+id/sendButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:id="@+id/noteD"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/slider1"
+        android:layout_alignStart="@+id/slider1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F Sharp"
+        android:id="@+id/noteFS"
+        android:layout_alignBaseline="@+id/noteD"
+        android:layout_alignBottom="@+id/noteD"
+        android:layout_toEndOf="@+id/noteD"
+        android:layout_marginStart="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G"
+        android:id="@+id/noteG"
+        android:layout_marginStart="19dp"
+        android:layout_alignBaseline="@+id/noteFS"
+        android:layout_alignBottom="@+id/noteFS"
+        android:layout_toEndOf="@+id/noteFS" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendText"
+        android:text="400"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/slider1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Frequency"
+        android:id="@+id/sendButton"
+        android:layout_alignBaseline="@+id/sendText"
+        android:layout_alignBottom="@+id/sendText"
+        android:layout_alignStart="@+id/onOffSwitch" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onOffSwitch"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/onOffText"
+        android:layout_alignEnd="@+id/onOffText" />
+
+</RelativeLayout>
